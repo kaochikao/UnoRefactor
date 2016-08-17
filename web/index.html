@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width initial-scale=1.0,minimum-scale=1.0,maximum-scale=no">
+    <link rel="stylesheet" href="vendor/chui-android.css">
+    <link rel="stylesheet" href="Style/main.css">
+</head>
+<body>
+
+<!------------------ 1. Launching Pad ----------------------------->
+
+<nav class="current">
+    <h1>Launching Pad</h1>
+</nav>
+<article id="launchingPadView" class="current">
+
+
+    <section class="secOne">
+        <br>
+        <div>
+            <label>Name: </label>
+            <input type="text" id="playerNameInput">
+        </div>
+        <br>
+        <button id="createGameModeBtn" class="action">Create a Game</button>
+        <button id="browseGamesModeBtn" class="action">Browse Games</button>
+    </section>
+
+
+</article>
+
+<!------------------ 2-1. Create a Game ----------------------------->
+<nav>
+    <h1>Create a New Game</h1>
+</nav>
+<article id="createGameView">
+
+    <section class="secTwo">
+        <div>
+            <label>Game ID: </label> <label id="gameIdLabel"></label>
+        </div>
+        <div>
+            <label> Game Title: </label><input type="text" id="gameTitleInput">
+        </div>
+        <br>
+        <br>
+        <button id="createGameBtn" class="action">Create</button>
+    </section>
+
+</article>
+
+
+<!------------------ 2-2. Browse All Games & Join ----------------------------->
+
+<nav>
+    <h1>Select a Game to Join</h1>
+</nav>
+<article id="browseGamesView">
+
+    <section class="secTwo">
+        <table id="browseGamesTable">
+            <tr id="gameTableHeaderRow">
+                <th>Game Title</th>
+                <th>Game Status</th>
+            </tr>
+        </table>
+
+        <br>
+        <br>
+        <button id="joinBtn" class="action">Join</button>
+    </section>
+
+</article>
+
+<!------------------ 3. Waiting ----------------------------->
+<nav>
+    <h1>Wait for Other Players to Join</h1>
+</nav>
+<article id="waitingView">
+    <section class="secOne">
+        <table id="playerListTable">
+            <tr id="playerTableHeaderRow">
+                <th>Player Name</th>
+            </tr>
+        </table>
+        <button id="goToGameButton" class="action"> Game started \n press to go to game</button>
+    </section>
+</article>
+
+<!------------------ 4. Playing ----------------------------->
+
+<nav>
+    <h1>Playing</h1>
+</nav>
+<article id="playingView">
+
+    <section class="secTwo">
+        <div>
+            <img src="" id="discardPileImg">
+            <img src="" id="drawPileImg">
+        </div>
+
+        <div id="handCardSection">
+        </div>
+    </section>
+</article>
+
+
+<!------------------End of Views ----------------------------->
+
+
+
+</body>
+<script type="application/javascript" src="vendor/jquery.js"></script>
+<script type="application/javascript" src="vendor/chui.js"></script>
+
+<script type="application/javascript" src="JS/settings.js"></script>
+<script type="application/javascript" src="JS/dataHandlers.js"></script>
+<script type="application/javascript" src="JS/actionSenders.js"></script>
+<script type="application/javascript" src="JS/WebSocket.js"></script>
+</html>
